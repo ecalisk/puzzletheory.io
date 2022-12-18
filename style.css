@@ -1,3 +1,10 @@
 html {
   margin: 32px 64px;
 }
+button,
+input {
+  padding: 8px;
+}
+input {
+  width: 17em;
+}
