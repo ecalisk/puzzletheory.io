@@ -1,4 +1,4 @@
-var LINE_SIZE = 100;
+var LINE_SIZE = 1000;
 
 /* func: Create an array of people */
 function constructLine(lineSize) {
@@ -18,22 +18,9 @@ function goThroughLineOnce(lineArray) {
   return newArray;
 }
 
-//DEBUG
-let myArray = constructLine(100);
-myArray = goThroughLineOnce(myArray);
-console.log(myArray);
-
-myArray = goThroughLineOnce(myArray);
-console.log(myArray);
-
-myArray = goThroughLineOnce(myArray);
-console.log(myArray);
-
-myArray = goThroughLineOnce(myArray);
-console.log(myArray);
-
-myArray = goThroughLineOnce(myArray);
-console.log(myArray);
-
-myArray = goThroughLineOnce(myArray);
-console.log(myArray);
+/* Construct line, repeatedly go through line until last man standing */
+let myArray = constructLine(LINE_SIZE);
+while (myArray.length != 1) {
+  myArray = goThroughLineOnce(myArray);
+  console.log(myArray);
+}
